@@ -1,0 +1,15 @@
+<p>category works!</p>
+<section class="category">
+  <h2>Categories</h2>
+  <div class="category-list">
+    @for (category of categories; track category) {
+      <button (click)="handleCategoryChange( category)">
+        <div class="category-card">
+          <h3>{{ category }}</h3>
+        </div>
+      </button>
+    } @empty {
+      <li>There are no categories.</li>
+    }
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="fav">
+  <h2>Favourite Products</h2>
+  <div class="fav-list">
+    @for (product of favService.getFav(); track product.id) {
+      <div class="fav-card">
+        <img [src]="product.image" alt="{{ product.title }}" class="fav-image">
+        <div class="fav-content">
+          <h3>{{ product.title }}</h3>
+          <p class="fav-price">\${{ product.price }}</p>
+          <button (click)="removeFromFav(product)" class="remove-fav">Remove</button>
+        </div>
+      </div>
+    } @empty {
+      <li>There are no items.</li>
+    }
+  </div>
+</section>

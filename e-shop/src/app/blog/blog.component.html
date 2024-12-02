@@ -1,0 +1,35 @@
+<section class="blog">
+  <h2>Customers feedback</h2>
+  <div class="blog-list">
+    @for (item of comments; track item.id) {
+<!--      <div class="item">-->
+<!--        <h3>{{ item.id }}</h3>-->
+<!--        <h3>{{ item.name }}</h3>-->
+<!--        <h3>{{ item.body }}</h3>-->
+<!--        <p>{{ item.body }}</p>-->
+<!--      </div>-->
+      <div class="blog-card">
+        <div class="blog-content">
+          <h3>{{ item.name }}</h3>
+          <h3>{{ item.body }}</h3>
+          <p class="blog-excerpt">{{ item.email }}</p>
+        </div>
+      </div>
+    } @empty {
+      <li>There are no items.</li>
+    }
+  </div>
+</section>
+
+<!--<section class="blog">-->
+<!--  <h2>Our Blog</h2>-->
+<!--  <div class="blog-list">-->
+<!--    <div *ngFor="let post of comments" class="blog-card">-->
+<!--      <img [src]="post.image" alt="{{ post.title }}" class="blog-image">-->
+<!--      <div class="blog-content">-->
+<!--        <h3>{{ post.title }}</h3>-->
+<!--        <p class="blog-excerpt">{{ post.excerpt }}</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
